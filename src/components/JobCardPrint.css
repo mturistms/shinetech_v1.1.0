@@ -1,0 +1,309 @@
+.print-container {
+    background: white;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+.a4-page {
+    width: 210mm;
+    height: 297mm;
+    padding: 10mm;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* HEADER */
+.header-grid {
+    display: grid;
+    grid-template-columns: 50mm 1fr 1fr;
+    border: 2px solid #000;
+}
+
+.header-grid>div {
+    border: 1px solid #000;
+    padding: 6px;
+    font-size: 9pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+}
+
+.header-logo img {
+    width: 100%;
+}
+
+/* Highlight important customer info */
+.highlight-cell {
+    font-size: 11pt;
+    /* bigger */
+}
+
+.highlight-value {
+    font-weight: bold;
+    font-size: 11pt;
+    /* even bigger value */
+}
+
+/* Make PH & CUSTOMER inline */
+.inline-cell {
+    flex-direction: row !important;
+    /* 🔥 override column */
+    align-items: center;
+    gap: 6px;
+}
+
+/* Keep label normal */
+.inline-cell .cell-label {
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+/* Value larger */
+.inline-cell .highlight-value {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.job-title {
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: 40mm 130mm 20mm;
+}
+
+
+.shop-name {
+    font-weight: bold;
+}
+
+.delivery-line {
+    margin-left: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* MAIN TABLE */
+.main-grid {
+    border: 2px solid #000;
+    margin-top: 2mm;
+    height: 100mm;
+}
+
+.main-grid-header {
+    display: grid;
+    grid-template-columns: 40mm 130mm 20mm;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: 40mm 130mm 20mm;
+    background: #fff;
+}
+
+.main-grid-header div,
+.grid-cell {
+    border: 1px solid #000;
+    padding: 2px 6px;
+    font-size: 9pt;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.grid-cell {
+    height: 7mm;
+    word-break: break-word;
+    white-space: normal;
+}
+
+/* FOOTER */
+.footer-section-wrapper {
+    border: 2px solid #000;
+    margin-top: 10mm;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.footer-columns {
+    display: flex;
+    border-bottom: 2px solid #000;
+    height: 50mm;
+}
+
+
+.footer-left,
+.remark-box,
+.footer-right {
+    padding: 4px;
+    font-size: 9pt;
+}
+
+.footer-left {
+    width: 45%;
+    border-right: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.est-adv-block {
+    margin-bottom: 2mm;
+}
+
+.est-adv-block div {
+    font-size: 10pt;
+    margin-bottom: 1mm;
+}
+
+
+.remark-box {
+    width: 30%;
+    border-right: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.remark-title {
+    font-weight: bold;
+    margin-bottom: 2mm;
+}
+
+.remark-line {
+    width: 90%;
+    border-bottom: 1px solid #000;
+}
+
+.footer-right {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.check-row {
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 2px 0 6px 0;
+    text-align: center;
+}
+
+
+.outside-header {
+    display: grid;
+    grid-template-columns: 1fr 60px;
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+    margin-top: 4mm;
+}
+
+.outside-row {
+    display: grid;
+    grid-template-columns: 1fr 60px;
+}
+
+.outside-row div {
+    border-bottom: 1px solid #000;
+    height: 7mm;
+    border-right: 1px solid #000;
+}
+
+.outside-row div:last-child {
+    border-right: none;
+}
+
+
+.footer-right table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.footer-right td {
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+.footer-right .total td {
+    font-weight: bold;
+}
+
+/* GATE PASS (Inside Wrapper) */
+.gatepass-box {
+    padding: 2mm;
+    font-size: 9pt;
+}
+
+
+.gatepass-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2mm;
+    text-decoration: underline;
+}
+
+.gatepass-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.gatepass-grid div {
+    border: 1px solid #000;
+    padding: 3px;
+    text-align: center;
+    height: 10mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gatepass-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2mm;
+}
+
+/* SIGNATURE */
+.signature {
+    margin-top: 4mm;
+    text-align: right;
+    font-size: 9pt;
+}
+
+.sig-line {
+    width: 60mm;
+    border-bottom: 1px solid #000;
+    margin-left: auto;
+}
+
+/* Ensure all text is black for clarity */
+.print-container *,
+.print-container div,
+.print-container span,
+.print-container b,
+.print-container td {
+    color: #000 !important;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body {
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .print-container {
+        padding: 0;
+    }
+}
