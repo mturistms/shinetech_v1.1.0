@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [react()],
     base: process.env.VITE_BASE_PATH || "/shinetech_v1.1.0",
     server: {
-        port: 3000,
+        port: process.env.NODE_PORT,
 
         // 👇 IMPORTANT for ngrok
         host: true,
@@ -14,7 +14,7 @@ export default defineConfig({
 
         proxy: {
             '/api': {
-                target: 'http://localhost:5000',
+                target: process.env.NODE_BASE_URL,
                 changeOrigin: true,
                 secure: false
             }
