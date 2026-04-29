@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [react()],
     base: process.env.VITE_BASE_PATH || "/shinetech_v1.1.0",
     server: {
-        port: process.env.NODE_PORT,
+        port: process.env.NODE_PORT_BASE,
 
         // 👇 IMPORTANT for ngrok
         host: true,
